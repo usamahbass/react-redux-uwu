@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: cursive;
+}
+
+.flexBoxContainer {
+  display: flex;
+  margin-top: 150px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.calculator {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.calculator .keys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border: #ffffff 1px solid;
+  height: 50px;
+  font-size: 20px;
+  width: 25%;
+  break-inside: avoid;
+  cursor: pointer;
+}
+
+.calculator input {
+  font-size: 20px;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  direction: rtl;
+}
+
+.keys_wrapper {
+  /* 2 */
+  display: flex;
+  width: 100%;
+}
+
+.keys_wrapper > section:first-child {
+  /* 3 */
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.keys_wrapper > section:first-child > div {
+  /* 4 */
+  flex: 1 0 33.33%;
+}
+
+.keys_wrapper > section:first-child > div:nth-child(4) {
+  /* 5 */
+  flex-basis: 66.67%;
+}
+
+.keys_wrapper > section:last-child {
+  /* 6 */
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.keys_wrapper .tall {
+  /* 7 */
+  width: 100%;
+  flex: 1;
+}
+
+@media (min-width: 321px) {
+  .calculator {
+    width: 320px;
+  }
+}
